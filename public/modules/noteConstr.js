@@ -1,4 +1,5 @@
 let noteConstr = (function() {
+  /* note constructor */
   function Note(title, body, timestamp) {
     this.title = title,
     this.body = body,
@@ -7,6 +8,7 @@ let noteConstr = (function() {
 
   return {
     construct: function(title, body, timestamp) {
+      /* returns note */
       return new Note(title, body, timestamp);
     }
   }
