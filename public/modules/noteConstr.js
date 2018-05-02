@@ -1,6 +1,7 @@
 let noteConstr = (function() {
   /* note constructor */
   /* small comment */
+  /* another comment */
   function Note(title, body, timestamp) {
     this.title = title,
     this.body = body,
