@@ -30,7 +30,7 @@ if(command === 'add') {
 } else if(command === 'read') {
   notes.readNote(argv.title);
 } else if(command === 'remove') {
-  console.log('remove command: ', argv.title);
+  notes.removeNote(argv.title);
 } else {
   console.log('Command not found.');
 }

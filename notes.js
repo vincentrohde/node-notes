@@ -73,6 +73,29 @@ let notes = (function() {
 
       });
 
+    },
+
+    removeNote: function(title) {
+      fs.readFile('./public/notes.json', function(err, data) {
+        if(err) { console.log(err) }
+        let notes = JSON.parse(data);
+        let found = false;
+
+        for(let i = 0; i < notes.notes.length; i++) {
+          let note = JSON.parse(notes.notes[i]);
+          if(note.title == title) {
+            notes.notes.splice(i, 1);
+            found = true;
+          }
+        }
+
+        if(!found) {
+          console.log('Note not found');
+        }
+
+        saveNotes(notes);
+
+      });
     }
   };
 })();
