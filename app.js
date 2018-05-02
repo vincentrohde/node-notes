@@ -19,7 +19,7 @@ if(command === 'add') {
     
     let note = JSON.stringify(myNote);
 
-    console.log(note);
+    notes.addNote(note);
   } else {
     /* Conditional check what is missing */
     console.log(argv.title ? '--body is missing' : '--title is missing');
@@ -28,7 +28,7 @@ if(command === 'add') {
 } else if(command === 'list') {
   notes.listNotes();
 } else if(command === 'read') {
-  console.log('read command: ', argv.title);
+  notes.readNote(argv.title);
 } else if(command === 'remove') {
   console.log('remove command: ', argv.title);
 } else {
