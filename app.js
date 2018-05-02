@@ -3,6 +3,10 @@
 const fs = require('fs');
 const yargs = require('yargs');
 
+/* Requiring the own modules */
+const notes = require('./notes');
+const noteConstr = require('./public/modules/noteConstr');
+
 /* Create yargs process object for commands */
 const argv = yargs.argv;
 let command = argv._[0];
@@ -22,7 +26,7 @@ if(command === 'add') {
   }
 
 } else if(command === 'list') {
-  console.log('list command');
+  notes.listNotes();
 } else if(command === 'read') {
   console.log('read command: ', argv.title);
 } else if(command === 'remove') {
