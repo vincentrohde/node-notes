@@ -1,4 +1,4 @@
-# node-notes
+# notes.js
 
 A small notes application, that lets you add, remove and read notes.
 
